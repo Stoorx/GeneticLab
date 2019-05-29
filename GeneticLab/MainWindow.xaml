@@ -1,0 +1,42 @@
+﻿<Window x:Class="GeneticLab.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GeneticLab"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        mc:Ignorable="d"
+        Title="GeneticLab" Height="350" Width="525">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100px"/>
+            <ColumnDefinition Width="*"/>            
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Label>Gene Len</Label>
+            <TextBox Name="GeneLengthText" TextAlignment="Right">4</TextBox>
+            <Label>dT</Label>
+            <TextBox Name="dTText" TextAlignment="Right">0.01</TextBox>
+            <Label>Max pop</Label>
+            <TextBox Name="MaxPopulationText" TextAlignment="Right">16</TextBox>
+            <Label>Good rate</Label>
+            <TextBox Name="GoodRateText" TextAlignment="Right">0.40</TextBox>
+            <Label>Mut rate</Label>
+            <TextBox Name="MutRateText" TextAlignment="Right">0.10</TextBox>
+            
+            <Label>Iter</Label>
+            <TextBox Name="ItCounter" TextAlignment="Right">1000</TextBox>
+            <Button Click="ButtonBase_OnClick" Name="StartButton">Start</Button>
+            <ProgressBar Name="Bar" Height="23px"></ProgressBar>
+            <Label Name="IterationsLabel" HorizontalAlignment="Right">0</Label>
+            <Label Name="PopSize" HorizontalAlignment="Right">0</Label>
+            <TextBox Name="FirstCount" TextAlignment="Right">10</TextBox>
+            <Button Click="ShowFirst_OnClick">Show first...</Button>
+            <Button Click="Reset_OnClick">Reset</Button>
+        </StackPanel>
+        <oxy:PlotView Grid.Column="1" Name="GeneticPlotView">
+            
+        </oxy:PlotView>
+        
+    </Grid>
+</Window>
